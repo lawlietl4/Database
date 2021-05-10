@@ -27,7 +27,7 @@ namespace Database
             InitializeComponent();
         }
         private GameTableAdapter gameTableAdapter = new();
-        private DataSet dataSet = new("Game");
+        private DataSet dataSet;
         public void Window_Loaded()
         {
             gameTableAdapter.Fill(dataSet.Game);
