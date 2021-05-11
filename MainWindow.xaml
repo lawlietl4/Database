@@ -5,11 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Loaded="Window_Loaded"
-        Title="DatabaseDisplay" Height="450" Width="800">
+        Title="DatabaseDisplay" Height="450" Width="800"
+        >
     <Grid>
-        <Button x:Name="UpdateBtn" Content="update" Click="UpdateBtn_Click" Grid.Row="1" Margin="250,20,250,30"/>
-        <DataGrid x:Name="dgd" ItemsSource="{Binding}" Grid.Column="1" Grid.Row="0">
+        <DataGrid x:Name="dgd" ItemsSource="{Binding}" Grid.Column="1">
+            
         </DataGrid>
+        <Button x:Name="UpdateBtn" Content="update" Click="UpdateBtn_Click" Grid.Row="1" Margin="250,20,250,30"/>
         <Grid.RowDefinitions>
             <RowDefinition Height="3*"/>
             <RowDefinition Height="1*"/>

@@ -12,11 +12,12 @@ namespace Database
         {
             InitializeComponent();
         }
-        private GameTableAdapter gameTableAdapter = new();
-        private DataSet1 dataSet = new();
+        GameTableAdapter gameTableAdapter = new GameTableAdapter();
+        DataSet1 dataSet = new DataSet1();
         public void Window_Loaded(object sender, RoutedEventArgs e)
         {
             gameTableAdapter.Fill(dataSet.Game);
+            dgd.DataContext = dataSet.Game.DefaultView;
         }
 
         private void UpdateBtn_Click(object sender, RoutedEventArgs e)
